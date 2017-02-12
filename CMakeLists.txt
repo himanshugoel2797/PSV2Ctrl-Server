@@ -54,6 +54,8 @@ add_executable(psv2ctrl
   src/main.c
   src/net.c
   src/ctrl.c
+  src/usb.c
+  src/display.c
 )
 
 # Library to link to (drop the -l prefix). This will mostly be stubs.
@@ -62,9 +64,11 @@ target_link_libraries(psv2ctrl
   SceLibKernel_stub
   SceSysmodule_stub
   SceCtrl_stub
+  m
   SceMotion_stub
   SceTouch_stub
   SceNet_stub
+  SceUsbSerial_stub
   SceNetCtl_stub
   SceAppUtil_stub
   ScePgf_stub

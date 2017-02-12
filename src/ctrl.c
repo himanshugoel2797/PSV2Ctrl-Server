@@ -15,6 +15,8 @@ InitializeCtrl(void) {
     sceMotionStartSampling();
 
     //Setup touch controls
+    sceTouchSetSamplingState(SCE_TOUCH_PORT_FRONT, 1);
+    sceTouchSetSamplingState(SCE_TOUCH_PORT_BACK, 1);
     sceTouchEnableTouchForce(SCE_TOUCH_PORT_FRONT);
     sceTouchEnableTouchForce(SCE_TOUCH_PORT_BACK);
 }
