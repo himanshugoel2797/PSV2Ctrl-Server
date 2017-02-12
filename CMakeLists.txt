@@ -25,20 +25,19 @@ include("${VITASDK}/share/vita.cmake" REQUIRED)
 set(VITA_APP_NAME "PSV2Ctrl")
 # Unique ID must be exactly 9 characters. Recommended: XXXXYYYYY where X = 
 # unique string of developer and Y = a unique number for this app
-set(VITA_TITLEID  "V2CT00006")
+set(VITA_TITLEID  "V2CT00005")
 # Optional version string to show in LiveArea's more info screen
 set(VITA_VERSION  "01.00")
 
 ## Flags and includes for building
 # Note that we make sure not to overwrite previous flags
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c11")
 # Optional. You can specify more param.sfo flags this way.
 set(VITA_MKSFOEX_FLAGS "${VITA_MKSFOEX_FLAGS} -d PARENTAL_LEVEL=1")
 
 # Add any additional include paths here
 include_directories(
-  ../common # This is for debugScreenPrintf(), you shouldn't need it in your projects
   inc
 )
 

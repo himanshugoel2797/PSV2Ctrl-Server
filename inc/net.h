@@ -8,11 +8,23 @@
 void
 InitializeNet(void);
 
-void
-PollConnection(void);
+int
+NetIsInitialized(void);
 
 void
-SendPacket(void);
+GetCurrentIP(char ip[16]);
+
+int
+GetListeningPort(void);
+
+void
+GetDHCPName(char dst[256]);
+
+int
+PollNetConnection(void);
+
+void
+SendNetPacket(void *data, int sz);
 
 void
 CloseConnection(void);

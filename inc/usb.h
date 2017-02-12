@@ -6,6 +6,8 @@
 void
 InitializeUSB(void);
 
+int
+USBIsInitialized(void);
 
 
 #endif
